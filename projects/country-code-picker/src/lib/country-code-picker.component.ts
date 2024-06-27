@@ -4,13 +4,7 @@ import { Component } from '@angular/core';
   selector: 'lib-countryCodePicker',
   standalone: true,
   imports: [],
-  template: `
-    <p>
-      country-code-picker works!
-    </p>
-  `,
-  styles: ``
+  template: ` <p>country-code-picker works!</p> `,
+  styles: ``,
 })
-export class CountryCodePickerComponent {
-
-}
+export class CountryCodePicker {}

@@ -29,8 +29,8 @@ export interface countryCode {
   ],
 })
 export class CountryCodePickerComponent {
-  @Input('displayValue') displayValue: any = '';
-  @Input('defaultValue') selectedValue: string = '';
+  @Input('displayValue') displayValue: any = 'dial_code';
+  @Input('defaultValue') selectedValue: string = '+91';
   @Input('backgroundColor') backgroundColor: string = '';
   @Output('actionSelectEvent') actionSelectEvent = new EventEmitter();
 
