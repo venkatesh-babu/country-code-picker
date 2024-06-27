@@ -67,3 +67,9 @@ export class AppComponent {
 | Output            | Description                                        |
 | ----------------- | -------------------------------------------------- |
 | actionSelectEvent | event will called when an country code is selected |
+
+## Changelog
+
+### 1.0.0
+
+- Release July 27, 2024
