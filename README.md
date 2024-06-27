@@ -1,27 +1,61 @@
 # country-code-picker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+Angular country code picker for [angular-material](https://github.com/venkatesh-babu/country-code-picker.git)
 
-## Development server
+## Live example
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<img src="src/assets/sample.gif" alt="Live example"> </a>
 
-## Code scaffolding
+## Getting started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Step 1: Install `angular material`:
 
-## Build
+##### NPM
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```shell
+ng add @angular/material
+```
 
-## Running unit tests
+### Step 2: Import the countryCodeComponent
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**`popup.component.ts`**
 
-## Running end-to-end tests
+```typescript
+import { countryCodeComponent } from "country-code-picker";
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+@Component({
+  selector: "app-popup",
+  standalone: true,
+  imports: [RouterOutlet, countryCodeComponent],
+  templateUrl: "./popup.component.html",
+  styleUrl: "./popup.component.scss",
+})
+export class AppComponent {
+  actionSelectEvent(event: any) {
+    console.log(event);
+  }
+}
+```
 
-## Further help
+### Step 3: implement in html
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+**`popup.component.html`**
+
+```html
+<country-code-field displayValue="dial_code" defaultValue="+91" (actionSelectEvent)="actionSelectEvent($event)"></country-code-field>
+```
+
+## API
+
+### Inputs
+
+| Input        | Type   | Default     | Required | Description                                         |
+| ------------ | ------ | ----------- | -------- | --------------------------------------------------- |
+| displayValue | string | 'dial_code' | no       | Text for display value that display in select field |
+| defaultValue | string | '+91'       | no       | default value to be selected                        |
+
+### Outputs
+
+| Output            | Description                                        |
+| ----------------- | -------------------------------------------------- |
+| actionSelectEvent | event will called when an country code is selected |
