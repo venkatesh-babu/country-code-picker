@@ -16,7 +16,15 @@ Angular country code picker for [angular-material](https://github.com/venkatesh-
 ng add @angular/material
 ```
 
-### Step 2: Import the countryCodeComponent
+### Step 2: Install `country-code-picker`:
+
+##### NPM
+
+```shell
+npm install country-code-picker
+```
+
+### Step 3: Import the countryCodeComponent
 
 **`popup.component.ts`**
 
@@ -37,7 +45,7 @@ export class AppComponent {
 }
 ```
 
-### Step 3: implement in html
+### Step 4: implement in html
 
 **`popup.component.html`**
 

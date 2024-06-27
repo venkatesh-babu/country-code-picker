@@ -1,9 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MaterialUiModule } from '../material-ui/material-ui.module';
+import { MAT_SELECT_CONFIG } from '@angular/material/select';
 import { FormControl } from '@angular/forms';
 import { Observable, startWith, debounceTime, map } from 'rxjs';
-import { CommonModule } from '@angular/common';
-import { MAT_SELECT_CONFIG } from '@angular/material/select';
 
 export interface data {
   name: string;
@@ -16,11 +16,11 @@ export interface countryCode {
 }
 
 @Component({
-  selector: 'lib-popup',
+  selector: 'country-code-picker',
   standalone: true,
   imports: [CommonModule, MaterialUiModule],
-  templateUrl: './popup.component.html',
-  styleUrl: './popup.component.css',
+  templateUrl: './country-code-picker.component.html',
+  styleUrl: './country-code-picker.component.scss',
   providers: [
     {
       provide: MAT_SELECT_CONFIG,
@@ -28,7 +28,7 @@ export interface countryCode {
     },
   ],
 })
-export class PopupComponent {
+export class CountryCodePickerComponent {
   @Input('displayValue') displayValue: any = '';
   @Input('defaultValue') selectedValue: string = '';
   @Input('backgroundColor') backgroundColor: string = '';

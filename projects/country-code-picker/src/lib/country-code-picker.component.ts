@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'lib-my-library',
+  selector: 'lib-countryCodePicker',
   standalone: true,
   imports: [],
   template: `
     <p>
-      my-library works!
+      country-code-picker works!
     </p>
   `,
   styles: ``
 })
-export class MyLibraryComponent {
+export class CountryCodePickerComponent {
 
 }

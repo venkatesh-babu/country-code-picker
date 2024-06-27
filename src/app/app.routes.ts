@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { PopupComponent } from '../../projects/my-library/src/public-api';
+import { CountryCodePickerComponent } from '../../projects/country-code-picker/src/public-api';
 
 export const routes: Routes = [
   {
@@ -9,6 +9,6 @@ export const routes: Routes = [
   },
   {
     path: 'field',
-    component: PopupComponent,
+    component: CountryCodePickerComponent,
   },
 ];
