@@ -1,0 +1,47 @@
+<div class="form-field flex flex-vertical-space-center container">
+  <mat-form-field appearance="outline" class="hidden">
+    <mat-select
+      (selectionChange)="selectionChangeForContactMobileCc($event.value)"
+      #select1
+    >
+      <div>
+        <div class="p1-s search-in primary-background">
+          <input
+            class="br1 border sp w100 primary-background outline"
+            type="text"
+            name="contactMobileCc"
+            id="item.type + item.label"
+            [required]="true"
+            [formControl]="myControl"
+            [matAutocomplete]="autoComplete"
+            placeholder="Search"
+          />
+          <mat-icon class="searchIcon">search</mat-icon>
+        </div>
+        <mat-autocomplete
+          autoActiveFirstOption
+          #autoComplete="matAutocomplete"
+          [displayWith]="displayFn"
+        >
+        </mat-autocomplete>
+        <div class="select-options">
+          <mat-option
+            *ngFor="let option of filteredOptions | async"
+            [id]="option.name"
+            [value]="option.name"
+            ><span class="secondary-para">{{ option.dial_code }} </span
+            ><span class="ml1 mr1 secondary-para">{{ option.code }} </span
+            >{{ option.name }}</mat-option
+          >
+        </div>
+      </div>
+    </mat-select>
+  </mat-form-field>
+  <div
+    (click)="select1.open()"
+    class="wf border br1 flex flex-vertical-space-center flex-horizontal-space-between pointer sp"
+  >
+    {{ selectedValue
+    }}<span class="flex"><mat-icon>arrow_drop_down</mat-icon></span>
+  </div>
+</div>
