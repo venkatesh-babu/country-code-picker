@@ -74,6 +74,6 @@ export class AppComponent {
 
 - Release July 27, 2024
 
-### 1.0.1 - added repos
+### 1.1.2 - added repos
 
-- Release July 27, 2024
+- Release July 28, 2024
