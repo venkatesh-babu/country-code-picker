@@ -1,6 +1,6 @@
 {
   "name": "country-code-picker",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -36,5 +36,14 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^17.3.0",
     "typescript": "~5.4.2"
-  }
+  },
+  "files": [
+    "README.md",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/venkatesh-babu/country-code-picker"
+  },
+  "homepage": "https://github.com/venkatesh-babu/country-code-picker#readme"
 }
