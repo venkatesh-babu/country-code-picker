@@ -1,6 +1,6 @@
 # country-code-picker
 
-Angular country code picker for [angular-material](https://github.com/venkatesh-babu/country-code-picker.git)
+Angular country code picker for form field [source](https://github.com/venkatesh-babu/country-code-picker.git)
 
 ## Live example
 
