@@ -24,22 +24,22 @@ ng add @angular/material
 npm install country-code-picker
 ```
 
-### Step 3: Import the countryCodeComponent
+### Step 3: Import the CountryCodePickerComponent
 
 **`popup.component.ts`**
 
 ```typescript
-import { countryCodeComponent } from "country-code-picker";
+import { CountryCodePickerComponent } from "country-code-picker";
 
 @Component({
   selector: "app-popup",
   standalone: true,
-  imports: [RouterOutlet, countryCodeComponent],
+  imports: [RouterOutlet, CountryCodePickerComponent],
   templateUrl: "./popup.component.html",
   styleUrl: "./popup.component.scss",
 })
 export class AppComponent {
-  actionSelectEvent(event: any) {
+  actionSelectEvent(event: Event) {
     console.log(event);
   }
 }
@@ -50,34 +50,20 @@ export class AppComponent {
 **`popup.component.html`**
 
 ```html
-<country-code-field displayValue="dial_code" defaultValue="+91" (actionSelectEvent)="actionSelectEvent($event)"></country-code-field>
+<country-code-picker displayValue="dial_code" defaultValue="+91" (actionSelectEvent)="actionSelectEvent($event)"></country-code-picker>
 ```
 
 ## API
 
 ### Inputs
 
-| Input        | Type   | Default     | Required | Description                                         |
-| ------------ | ------ | ----------- | -------- | --------------------------------------------------- |
-| displayValue | string | 'dial_code' | no       | Text for display value that display in select field |
-| defaultValue | string | '+91'       | no       | default value to be selected                        |
+| Input        | Type   | Default   | values         | Required | Description                                         |
+| ------------ | ------ | --------- | -------------- | -------- | --------------------------------------------------- |
+| displayValue | string | dial_code | dial_code/code | no       | Text for display value that display in select field |
+| defaultValue | string | +91       | +91/IN         | no       | default value to be selected                        |
 
 ### Outputs
 
 | Output            | Description                                        |
 | ----------------- | -------------------------------------------------- |
 | actionSelectEvent | event will called when an country code is selected |
-
-## Changelog
-
-### 1.0.0
-
-- Release July 27, 2024
-
-### 1.1.2 - added repos
-
-- Release July 28, 2024
-
-### 1.1.3 - updated readme content
-
-- Release July 28, 2024
