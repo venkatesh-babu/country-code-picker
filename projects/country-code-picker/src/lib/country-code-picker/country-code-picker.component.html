@@ -14,7 +14,7 @@
             [required]="true"
             [formControl]="myControl"
             [matAutocomplete]="autoComplete"
-            placeholder="Search"
+            [placeholder]="placeHolder"
           />
           <mat-icon class="searchIcon">search</mat-icon>
         </div>
@@ -29,10 +29,16 @@
             *ngFor="let option of filteredOptions | async"
             [id]="option.name"
             [value]="option.name"
-            ><span class="secondary-para">{{ option.dial_code }} </span
-            ><span class="ml1 mr1 secondary-para">{{ option.code }} </span
-            >{{ option.name }}</mat-option
           >
+            <div class="flex flex-vertical-space-center">
+              <span class="mr1"
+                ><img class="logo" [src]="option.flag" alt="logo"
+              /></span>
+              <span class="secondary-para">{{ option.dial_code }} </span
+              ><span class="ml1 mr1 secondary-para">{{ option.code }} </span>
+              <span>{{ option.name }}</span>
+            </div>
+          </mat-option>
         </div>
       </div>
     </mat-select>
@@ -40,8 +46,15 @@
   <div
     (click)="select1.open()"
     class="wf border br1 flex flex-vertical-space-center flex-horizontal-space-between pointer sp"
+    [style.background-color]="backgroundColor"
+    [style.border-color]="borderColor"
   >
-    {{ selectedValue
-    }}<span class="flex"><mat-icon>arrow_drop_down</mat-icon></span>
+    @if(selectedValue.includes('flag')){
+    <img class="logo" [src]="selectedValue" alt="logo" />
+    } @else {
+    {{ selectedValue }}
+    }
+
+    <span class="flex"><mat-icon>arrow_drop_down</mat-icon></span>
   </div>
 </div>

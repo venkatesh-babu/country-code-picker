@@ -1,5 +1,9 @@
 ## Changelog
 
+### 1.2.0 - added flags feature
+
+- Release July 29, 2024
+
 ### 1.1.4 - updated readme content
 
 - Release July 28, 2024

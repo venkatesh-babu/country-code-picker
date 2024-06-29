@@ -57,10 +57,13 @@ export class AppComponent {
 
 ### Inputs
 
-| Input        | Type   | Default   | values         | Required | Description                                         |
-| ------------ | ------ | --------- | -------------- | -------- | --------------------------------------------------- |
-| displayValue | string | dial_code | dial_code/code | no       | Text for display value that display in select field |
-| defaultValue | string | +91       | +91/IN         | no       | default value to be selected                        |
+| Input           | Type   | Default   | Allowed Values      | Required | Description                                   |
+| --------------- | ------ | --------- | ------------------- | -------- | --------------------------------------------- |
+| displayValue    | string | dial_code | dial_code/code/flag | no       | display value that display in select field    |
+| defaultValue    | string | +91       | +91/IN              | no       | default value to be selected                  |
+| placeHolder     | string | dial_code | any text            | no       | placeholder to display in search input        |
+| backgroundColor | string | #ffffff   | hex codes           | no       | color to add in background to selection field |
+| borderColor     | string | #000000   | hex codes           | no       | color to add in border to selection field     |
 
 ### Outputs
 

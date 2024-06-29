@@ -13,6 +13,7 @@ export interface countryCode {
   name: string;
   dial_code: string;
   code: string;
+  flag: String;
 }
 
 @Component({
@@ -31,7 +32,9 @@ export interface countryCode {
 export class CountryCodePickerComponent {
   @Input('displayValue') displayValue: any = 'dial_code';
   @Input('defaultValue') selectedValue: string = '+91';
-  @Input('backgroundColor') backgroundColor: string = '';
+  @Input('backgroundColor') backgroundColor: string = '#ffffff';
+  @Input('backgroundColor') borderColor: string = '#000000';
+  @Input('placeHolder') placeHolder: string = "Type : 'ind'";
   @Output('actionSelectEvent') actionSelectEvent = new EventEmitter();
 
   myControl = new FormControl();
@@ -1249,6 +1252,11 @@ export class CountryCodePickerComponent {
     },
   ];
   async ngOnInit() {
+    if (this.displayValue == 'flag') {
+      this.insertFlag(true);
+    } else {
+      this.insertFlag(false);
+    }
     this.filteredOptions = this.myControl.valueChanges.pipe(
       startWith(''),
       debounceTime(500),
@@ -1260,10 +1268,24 @@ export class CountryCodePickerComponent {
       })
     );
   }
-
+  insertFlag(showFlag: boolean) {
+    let prefix = '../assets/flags/4x3/';
+    this.countryCodeData.forEach((element: any) => {
+      let code = element.code.toLowerCase();
+      let url = `${prefix}${code}.svg`;
+      element['flag'] = url;
+      if (showFlag) {
+        if (
+          element.dial_code == this.selectedValue ||
+          element.code == this.selectedValue
+        ) {
+          this.selectedValue = url;
+        }
+      }
+    });
+  }
   private _filter(name: string): data[] {
     const filterValue = name.toLowerCase();
-
     return this.countryCodeData.filter((option: any) =>
       option.name.toLowerCase().includes(filterValue)
     );
