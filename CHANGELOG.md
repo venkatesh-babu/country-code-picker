@@ -1,8 +1,8 @@
 ## Changelog
 
-### 1.2.11 - updated readme and package.json
+### 1.2.12 - updated readme and package.json
 
-- Release July 29, 2024
+- Release July 30, 2024
 
 ### 1.2.7 - updated readme
 
