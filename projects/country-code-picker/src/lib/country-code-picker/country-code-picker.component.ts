@@ -33,7 +33,7 @@ export class CountryCodePickerComponent {
   @Input('displayValue') displayValue: any = 'dial_code';
   @Input('defaultValue') selectedValue: string = '+91';
   @Input('backgroundColor') backgroundColor: string = '#ffffff';
-  @Input('backgroundColor') borderColor: string = '#000000';
+  @Input('borderColor') borderColor: string = '#000000';
   @Input('placeHolder') placeHolder: string = "Type : 'ind'";
   @Output('actionSelectEvent') actionSelectEvent = new EventEmitter();
 

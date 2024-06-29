@@ -13,5 +13,4 @@ export class AppComponent {
   actionSelectEvent($event: any) {
     throw new Error('Method not implemented.');
   }
-  title = 'country-code-picker';
 }
