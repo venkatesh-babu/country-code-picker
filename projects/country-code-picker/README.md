@@ -53,7 +53,7 @@ export class AppComponent {
 <country-code-picker displayValue="dial_code" defaultValue="+91" placeHolder="search" backgroundColor="#ffffff" borderColor="#000000" (actionSelectEvent)="actionSelectEvent($event)"></country-code-picker>
 ```
 
-### Step 5: download and add flags folder in your assets that you can find in my repo
+### Step 5: download and add flags folder in your assets that you can find in my [repo](https://github.com/venkatesh-babu/country-code-picker)
 
 ## API
 
