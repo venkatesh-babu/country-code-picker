@@ -28,8 +28,8 @@
               "src/assets",
               {
                 "glob": "**/*",
-                "input": "./node_modules/@myscope/scoped-package/assets",
-                "output": "/assets/"
+                "input": "node_modules/country-code-picker/assets",
+                "output": "/assets/country-code-picker"
               }
             ],
             "styles": [

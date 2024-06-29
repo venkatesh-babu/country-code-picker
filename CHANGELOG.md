@@ -1,6 +1,10 @@
 ## Changelog
 
-### 1.2.0 - flags display fix
+### 1.2.7 - updated readme
+
+- Release July 29, 2024
+
+### 1.2.0 - flags display issue fix
 
 - Release July 29, 2024
 

@@ -1,6 +1,6 @@
 {
   "name": "country-code-picker",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -41,7 +41,10 @@
   },
   "files": [
     "README.md",
-    "index.js"
+    "index.js",
+    "dist",
+    "src",
+    "assets"
   ],
   "repository": {
     "type": "git",
