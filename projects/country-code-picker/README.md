@@ -50,7 +50,7 @@ export class AppComponent {
 **`popup.component.html`**
 
 ```html
-<country-code-picker displayValue="dial_code" defaultValue="+91" (actionSelectEvent)="actionSelectEvent($event)"></country-code-picker>
+<country-code-picker displayValue="dial_code" defaultValue="+91" placeHolder="search" backgroundColor="#ffffff" borderColor="#000000" (actionSelectEvent)="actionSelectEvent($event)"></country-code-picker>
 ```
 
 ## API
