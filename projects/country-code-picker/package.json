@@ -19,10 +19,5 @@
     "country codes",
     "mobile codes"
   ],
-  "files": [
-    "dist",
-    "src",
-    "assets"
-  ],
   "homepage": "https://github.com/venkatesh-babu/country-code-picker#readme"
 }

@@ -76,3 +76,5 @@ export class AppComponent {
 | Output            | Description                                        |
 | ----------------- | -------------------------------------------------- |
 | actionSelectEvent | event will called when an country code is selected |
+
+### [Changelogs](https://github.com/venkatesh-babu/country-code-picker/blob/main/CHANGELOG.md)

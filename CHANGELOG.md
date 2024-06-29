@@ -1,5 +1,9 @@
 ## Changelog
 
+### 1.2.11 - updated readme and package.json
+
+- Release July 29, 2024
+
 ### 1.2.7 - updated readme
 
 - Release July 29, 2024
